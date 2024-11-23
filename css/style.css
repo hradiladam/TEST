@@ -252,7 +252,7 @@ body.dark-theme .slider:before {
 @media (max-width: 599px) {
 
     body {
-        padding: 15px;
+        padding: 0;
     }
     .quote-container {
         padding: 1rem;

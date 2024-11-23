@@ -6,7 +6,7 @@
 
 /* Body and background */
 body {
-    transition: background-color 0.5 ease, color 0.5s ease;
+    transition: background-color 0.4s ease, transform 0.4s ease;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -14,11 +14,12 @@ body {
     min-height: 100vh;
     background-color: #f8f6f6;
     color: #333;
+    position: relative;
 }
 
 /* Main container for the content */
 .quote-container {
-    transition: background-color 0.5 ease, color 0.5s ease;
+    transition: background-color 0.4s ease, transform 0.4s ease;
     background: #e4e4e4;
     padding: 2rem;
     border-radius: 10px;
@@ -102,7 +103,7 @@ input {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #757474;
+    background-color: #383838;
     border-radius: 50px;
     transition: background-color 0.4s ease, transform 0.4s ease;
 }
@@ -110,22 +111,20 @@ input {
 .slider:before {
     content: "";
     position: absolute;
-    top: 0.1rem;
-    left: 0.1rem;
-    width: 1.8rem;
-    height: 1.8rem;
-    background-color: white;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #fff;
     border-radius: 50%;
     transition: transform 0.4s ease;
 }
 
-input:checked + .slider {
-    background-color: #008ce9;
-}
 
 input:checked + .slider:before {
     transform: translateX(2rem);
 }
+
 
 
 /* dark theme styles */
@@ -166,11 +165,11 @@ body.dark-theme #generate-quote-button:active {
 }
 
 body.dark-theme .slider {
-    background-color: #7f8c8d;
+    background-color: #dfdfdf;
 }
 
 body.dark-theme .slider:before {
-    background-color: #ecf0f1;
+    background-color: #2b2b2b;
 }
 
 /* tablet styling */ 
@@ -179,7 +178,8 @@ body.dark-theme .slider:before {
 
     body {
         flex-direction: column;
-        padding: 4rem;
+        justify-content: flex-start;
+        padding: 5rem;
     }
 
     .quote-container {
@@ -211,11 +211,12 @@ body.dark-theme .slider:before {
 
 /* phone in landscape styling */ 
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 767px) and (min-width: 600px) and (orientation: landscape) {
 
     body {
         flex-direction: column;
-        padding: 2rem;
+        justify-content: flex-start;
+        padding: 2.5rem;
     }
 
     .quote-container {
@@ -240,7 +241,8 @@ body.dark-theme .slider:before {
     }
 
     #theme-switch {
-        bottom: 3.5rem;
+        position: absolute;
+        bottom: 2.5rem;
         right: 1.5rem;
     }
 }
@@ -251,7 +253,7 @@ body.dark-theme .slider:before {
 @media (max-width: 599px) {
 
     body {
-        padding: 1.5rem;
+        padding: 1rem;
     }
     .quote-container {
         padding: 1rem;
@@ -266,7 +268,7 @@ body.dark-theme .slider:before {
     #quote-display {
         font-size: 1.1rem;
         margin-bottom: 1rem;
-        min-height: 5rem;
+        min-height: 80px;
     }
 
     #generate-quote-button {
@@ -276,7 +278,7 @@ body.dark-theme .slider:before {
 
     #theme-switch {
         position: absolute;
-        bottom: 2.5rem;
+        bottom: 5.5rem;
         right: 1rem;
     }
 }

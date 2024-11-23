@@ -6,6 +6,7 @@
 
 /* Body and background */
 body {
+    transition: background-color 0.5 ease, color 0.5s ease;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -13,11 +14,11 @@ body {
     min-height: 100vh;
     background-color: #f8f6f6;
     color: #333;
-    position: relative;
 }
 
 /* Main container for the content */
 .quote-container {
+    transition: background-color 0.5 ease, color 0.5s ease;
     background: #e4e4e4;
     padding: 2rem;
     border-radius: 10px;
@@ -174,7 +175,7 @@ body.dark-theme .slider:before {
 
 /* tablet styling */ 
 
-@media  only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
 
     body {
         flex-direction: column;
@@ -211,7 +212,7 @@ body.dark-theme .slider:before {
 
 /* phone in landscape styling */ 
 
-@media only screen and (max-width: 767px), (orientation: landscape) {
+@media (max-width: 767px) and (orientation: landscape) {
 
     body {
         flex-direction: column;
@@ -221,13 +222,13 @@ body.dark-theme .slider:before {
 
     .quote-container {
         padding: 1rem;
-        max-width: 600px;
+        max-width: 700px;
     }
 
     .quote-container h1 {
-        font-size: 1.4rem;
-        margin-top: 0.4rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.8rem;
     }
 
     #quote-display {
@@ -241,7 +242,7 @@ body.dark-theme .slider:before {
     }
 
     #theme-switch {
-        bottom: 1.5rem;
+        bottom: 3.5rem;
         right: 1.5rem;
     }
 }
@@ -249,10 +250,10 @@ body.dark-theme .slider:before {
 
 /* phone in portrait styling */ 
 
-@media  only screen and (max-width: 599px) {
+@media (max-width: 599px) {
 
     body {
-        padding: 0;
+        padding: 15px;
     }
     .quote-container {
         padding: 1rem;
@@ -276,7 +277,8 @@ body.dark-theme .slider:before {
     }
 
     #theme-switch {
-        bottom: 1rem;
+        position: absolute;
+        bottom: 10rem;
         right: 1rem;
     }
 }

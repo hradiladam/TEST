@@ -6,7 +6,7 @@
 
 /* Body and background */
 body {
-    transition: background-color 0.4s ease, transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     font-family: 'Helvetica Neue', Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@ body {
 
 /* Main container for the content */
 .quote-container {
-    transition: background-color 0.4s ease, transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     background: #e4e4e4;
     padding: 2rem;
     border-radius: 10px;
@@ -108,7 +108,7 @@ input {
     transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
-.slider:before {
+.slider::before {
     content: "";
     position: absolute;
     top: 0.2rem;
@@ -117,11 +117,10 @@ input {
     height: 1.6rem;
     background-color: #fff;
     border-radius: 50%;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-
-input:checked + .slider:before {
+input:checked + .slider::before {
     transform: translateX(2rem);
 }
 

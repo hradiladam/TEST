@@ -179,8 +179,7 @@ body.dark-theme .slider:before {
 
     body {
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 5rem;
+        padding: 4rem;
     }
 
     .quote-container {
@@ -216,7 +215,6 @@ body.dark-theme .slider:before {
 
     body {
         flex-direction: column;
-        justify-content: flex-start;
         padding: 2rem;
     }
 
@@ -253,7 +251,7 @@ body.dark-theme .slider:before {
 @media (max-width: 599px) {
 
     body {
-        padding: 15px;
+        padding: 1.5rem;
     }
     .quote-container {
         padding: 1rem;
@@ -268,7 +266,7 @@ body.dark-theme .slider:before {
     #quote-display {
         font-size: 1.1rem;
         margin-bottom: 1rem;
-        min-height: 100px;
+        min-height: 5rem;
     }
 
     #generate-quote-button {
@@ -278,7 +276,7 @@ body.dark-theme .slider:before {
 
     #theme-switch {
         position: absolute;
-        bottom: 10rem;
+        bottom: 2.5rem;
         right: 1rem;
     }
 }

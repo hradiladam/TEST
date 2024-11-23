@@ -277,8 +277,8 @@ body.dark-theme .slider:before {
     }
 
     #theme-switch {
-        position: absolute;
-        bottom: 5.5rem;
+        position: fixed;
+        bottom: 3.5rem;
         right: 1rem;
     }
 }
